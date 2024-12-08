@@ -1,95 +1,109 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Container, Box, Typography, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import RestaurantCard from './components/RestaurantCard';
+
+interface Restaurant {
+  name: string;
+  opening_time: { start: string; end: string }[];
+  type: string[];
+  address: string;
+  rating: number;
+  price: string;
+}
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState<Restaurant[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedPrice, setSelectedPrice] = useState<string>('all');
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  useEffect(() => {
+    const fetchRestaurants = async () => {
+      const response = await fetch('/restaurants.json');
+      const data = await response.json();
+      setRestaurants(data);
+      setFilteredRestaurants(data);
+    };
+
+    fetchRestaurants();
+  }, []);
+
+  const handleFilterChange = () => {
+    let filtered = restaurants;
+
+    if (selectedType !== '全部') {
+      filtered = filtered.filter((restaurant) =>
+        restaurant.type.includes(selectedType)
+      );
+    }
+
+    if (selectedPrice !== '全部') {
+      filtered = filtered.filter((restaurant) => restaurant.price === selectedPrice);
+    }
+
+    setFilteredRestaurants(filtered);
+  };
+
+  return (
+    <Container sx={{ marginTop: 4 }}>
+      <Box sx={{ marginBottom: 2 }}>
+        <Typography variant="h4" component="h1" align="center" sx={{ fontWeight: 'bold', color: '#3f51b5' }}>
+          NTU What To Eat
+        </Typography>
+      </Box>
+
+      {/* Filters Section */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginBottom: 3 }}>
+        <FormControl sx={{ width: 200 }}>
+          <InputLabel>Type</InputLabel>
+          <Select
+            value={selectedType}
+            label="Type"
+            onChange={(e) => setSelectedType(e.target.value)}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            <MenuItem value="全部">全部</MenuItem>
+            <MenuItem value="早餐">早餐</MenuItem>
+            <MenuItem value="午餐">午餐</MenuItem>
+            <MenuItem value="晚餐">晚餐</MenuItem>
+            <MenuItem value="點心">點心</MenuItem>
+            <MenuItem value="宵夜">宵夜</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl sx={{ width: 200 }}>
+          <InputLabel>Price</InputLabel>
+          <Select
+            value={selectedPrice}
+            label="Price"
+            onChange={(e) => setSelectedPrice(e.target.value)}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <MenuItem value="全部">全部</MenuItem>
+            <MenuItem value="$$">$$</MenuItem>
+            <MenuItem value="$$$">$$$</MenuItem>
+            <MenuItem value="$$$$">$$$$</MenuItem>
+          </Select>
+        </FormControl>
+
+        <Button variant="contained" color="primary" onClick={handleFilterChange}>
+          Apply Filters
+        </Button>
+      </Box>
+
+      {/* Restaurant List */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: 2,
+        }}
+      >
+        {filteredRestaurants.map((restaurant) => (
+          <RestaurantCard key={restaurant.name} restaurant={restaurant} />
+        ))}
+      </Box>
+    </Container>
   );
 }
