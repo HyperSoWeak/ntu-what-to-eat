@@ -4,7 +4,7 @@ export interface Restaurant {
   type: string[];
   address: string;
   rating: number;
-  price: string;
+  price: { low: number; high?: number };
   location: string;
   link: string;
 }

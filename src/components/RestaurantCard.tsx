@@ -31,7 +31,11 @@ const RestaurantCard = ({ restaurant }: { restaurant: Restaurant }) => {
           </div>
 
           {/* Price */}
-          <p className='text-xs sm:text-sm text-gray-700'>{restaurant.price}</p>
+          <p className='text-xs sm:text-sm text-gray-700'>
+            ${restaurant.price.low}
+            {restaurant.price.high && ` - $${restaurant.price.high}`}
+            {!restaurant.price.high && '+'}
+          </p>
         </div>
 
         {/* Type and Location */}
