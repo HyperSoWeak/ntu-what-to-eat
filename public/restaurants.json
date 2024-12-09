@@ -1,267 +1,41 @@
 [
   {
-    "name": "陽光咖啡館",
+    "name": "高和食堂",
     "opening_time": [
-      { "start": "08:00", "end": "11:00" },
-      { "start": "13:00", "end": "16:00" }
-    ],
-    "type": ["早餐", "午餐"],
-    "address": "台北市中山區陽光街123號",
-    "rating": 4.5,
-    "price": { "low": 0, "high": 200 },
-    "location": "公館",
-    "link": "https://maps.app.goo.gl/k7hsjP5KavHRLZnd9"
-  },
-  {
-    "name": "77小館",
-    "opening_time": [
-      { "start": "11:30", "end": "14:30" },
-      { "start": "17:00", "end": "21:00" }
+      { "start": "11:30", "end": "14:00" },
+      { "start": "17:00", "end": "20:30" }
     ],
     "type": ["午餐", "晚餐"],
-    "address": "台北市大安區小館大街456號",
+    "address": "106台北市大安區和平東路二段118巷60號",
     "rating": 4.2,
-    "price": { "low": 200, "high": 600 },
+    "price": { "low": 1, "high": 200 },
     "location": "118巷",
-    "link": "https://example.com/77小館"
+    "link": "https://maps.app.goo.gl/P9qzaqsdHyceGvXh6"
   },
   {
-    "name": "宵夜小吃店",
-    "opening_time": [{ "start": "22:00", "end": "02:00" }],
-    "type": ["宵夜"],
-    "address": "台北市信義區夜市街789號",
-    "rating": 4.7,
-    "price": { "low": 0, "high": 200 },
-    "location": "新生南路",
-    "link": "https://example.com/宵夜小吃店"
-  },
-  {
-    "name": "辛辣美食",
-    "opening_time": [{ "start": "17:00", "end": "23:00" }],
-    "type": ["晚餐", "點心"],
-    "address": "台北市中正區香料路321號",
-    "rating": 4.3,
-    "price": { "low": 400, "high": 600 },
-    "location": "公館",
-    "link": "https://example.com/辛辣美食"
-  },
-  {
-    "name": "快速小吃吧",
-    "opening_time": [{ "start": "09:00", "end": "18:00" }],
-    "type": ["點心"],
-    "address": "台北市萬華區快速街654號",
-    "rating": 3.9,
-    "price": { "low": 0, "high": 200 },
-    "location": "118巷",
-    "link": "https://example.com/快速小吃吧"
-  },
-  {
-    "name": "城市燒烤",
+    "name": "二八麵堂",
     "opening_time": [
-      { "start": "12:00", "end": "15:00" },
-      { "start": "18:00", "end": "22:00" }
+      { "start": "11:00", "end": "14:30" },
+      { "start": "17:00", "end": "20:30" }
     ],
     "type": ["午餐", "晚餐"],
-    "address": "台北市大同區城市大道111號",
-    "rating": 4.6,
-    "price": { "low": 600 },
-    "location": "新生南路",
-    "link": "https://example.com/城市燒烤"
-  },
-  {
-    "name": "比薩天堂",
-    "opening_time": [{ "start": "11:00", "end": "23:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市中山區比薩街888號",
-    "rating": 4.4,
-    "price": { "low": 200, "high": 400 },
-    "location": "公館",
-    "link": "https://example.com/比薩天堂"
-  },
-  {
-    "name": "蔬菜樂園",
-    "opening_time": [{ "start": "09:00", "end": "17:00" }],
-    "type": ["午餐", "點心"],
-    "address": "台北市松山區綠意大道234號",
+    "address": "106台北市大安區和平東路二段118巷65-4號",
     "rating": 4.0,
-    "price": { "low": 0, "high": 200 },
+    "price": { "low": 1, "high": 200 },
     "location": "118巷",
-    "link": "https://example.com/蔬菜樂園"
+    "link": "https://maps.app.goo.gl/eV1yHWRQ78CgqSWX9"
   },
   {
-    "name": "壽司角落",
+    "name": "I'm Pasta 和平店",
     "opening_time": [
-      { "start": "10:30", "end": "14:30" },
-      { "start": "17:30", "end": "22:00" }
+      { "start": "11:00", "end": "15:00" },
+      { "start": "17:00", "end": "20:30" }
     ],
     "type": ["午餐", "晚餐"],
-    "address": "台北市信義區魚街555號",
-    "rating": 4.8,
-    "price": { "low": 400, "high": 600 },
-    "location": "新生南路",
-    "link": "https://example.com/壽司角落"
-  },
-  {
-    "name": "沙拉吧",
-    "opening_time": [{ "start": "08:00", "end": "16:00" }],
-    "type": ["早餐", "午餐"],
-    "address": "台北市大安區綠意路123號",
+    "address": "106台北市大安區和平東路二段118巷50號",
     "rating": 4.2,
-    "price": { "low": 0, "high": 200 },
-    "location": "公館",
-    "link": "https://example.com/沙拉吧"
-  },
-  {
-    "name": "漢堡大亨",
-    "opening_time": [{ "start": "11:00", "end": "23:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市大同區漢堡巷234號",
-    "rating": 4.3,
-    "price": { "low": 200, "high": 400 },
+    "price": { "low": 1, "high": 200 },
     "location": "118巷",
-    "link": "https://example.com/漢堡大亨"
-  },
-  {
-    "name": "咖啡天堂",
-    "opening_time": [{ "start": "07:00", "end": "19:00" }],
-    "type": ["早餐", "點心"],
-    "address": "台北市中山區咖啡巷666號",
-    "rating": 4.5,
-    "price": { "low": 0, "high": 200 },
-    "location": "新生南路",
-    "link": "https://example.com/咖啡天堂"
-  },
-  {
-    "name": "塔可小鎮",
-    "opening_time": [{ "start": "12:00", "end": "22:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市松山區塔可路123號",
-    "rating": 4.1,
-    "price": { "low": 200, "high": 400 },
-    "location": "公館",
-    "link": "https://example.com/塔可小鎮"
-  },
-  {
-    "name": "義大利麵天堂",
-    "opening_time": [{ "start": "10:00", "end": "22:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市大安區義麵大道789號",
-    "rating": 4.7,
-    "price": { "low": 400, "high": 600 },
-    "location": "118巷",
-    "link": "https://example.com/義大利麵天堂"
-  },
-  {
-    "name": "冰沙站",
-    "opening_time": [{ "start": "09:00", "end": "17:00" }],
-    "type": ["點心"],
-    "address": "台北市中正區冰沙街432號",
-    "rating": 4.4,
-    "price": { "low": 0, "high": 200 },
-    "location": "新生南路",
-    "link": "https://example.com/冰沙站"
-  },
-  {
-    "name": "點心樂園",
-    "opening_time": [
-      { "start": "10:00", "end": "14:00" },
-      { "start": "17:00", "end": "21:00" }
-    ],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市大安區點心路777號",
-    "rating": 4.6,
-    "price": { "low": 400, "high": 600 },
-    "location": "公館",
-    "link": "https://example.com/點心樂園"
-  },
-  {
-    "name": "漢堡小屋",
-    "opening_time": [{ "start": "11:00", "end": "23:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市大同區漢堡巷321號",
-    "rating": 4.0,
-    "price": { "low": 200, "high": 400 },
-    "location": "118巷",
-    "link": "https://example.com/漢堡小屋"
-  },
-  {
-    "name": "咖哩大王",
-    "opening_time": [{ "start": "10:00", "end": "22:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市信義區咖哩路999號",
-    "rating": 4.3,
-    "price": { "low": 400, "high": 600 },
-    "location": "新生南路",
-    "link": "https://example.com/咖哩大王"
-  },
-  {
-    "name": "炸雞小屋",
-    "opening_time": [{ "start": "10:00", "end": "23:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市中山區炸雞路777號",
-    "rating": 4.5,
-    "price": { "low": 200, "high": 400 },
-    "location": "公館",
-    "link": "https://example.com/炸雞小屋"
-  },
-  {
-    "name": "冰淇淋店",
-    "opening_time": [{ "start": "12:00", "end": "22:00" }],
-    "type": ["點心"],
-    "address": "台北市大安區冰淇淋街123號",
-    "rating": 4.1,
-    "price": { "low": 0, "high": 200 },
-    "location": "118巷",
-    "link": "https://example.com/冰淇淋店"
-  },
-  {
-    "name": "坦都里風味",
-    "opening_time": [{ "start": "11:00", "end": "22:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市松山區坦都里路666號",
-    "rating": 4.6,
-    "price": { "low": 400, "high": 600 },
-    "location": "新生南路",
-    "link": "https://example.com/坦都里風味"
-  },
-  {
-    "name": "烘焙樂園",
-    "opening_time": [{ "start": "08:00", "end": "18:00" }],
-    "type": ["早餐", "點心"],
-    "address": "台北市大同區烘焙大道234號",
-    "rating": 4.3,
-    "price": { "low": 0, "high": 200 },
-    "location": "公館",
-    "link": "https://example.com/烘焙樂園"
-  },
-  {
-    "name": "海鮮特選",
-    "opening_time": [{ "start": "11:00", "end": "22:00" }],
-    "type": ["午餐", "晚餐"],
-    "address": "台北市中山區海鮮路321號",
-    "rating": 4.8,
-    "price": { "low": 400, "high": 600 },
-    "location": "118巷",
-    "link": "https://example.com/海鮮特選"
-  },
-  {
-    "name": "素食天地",
-    "opening_time": [{ "start": "08:00", "end": "16:00" }],
-    "type": ["早餐", "午餐"],
-    "address": "台北市大安區素食街555號",
-    "rating": 4.0,
-    "price": { "low": 0, "high": 200 },
-    "location": "新生南路",
-    "link": "https://example.com/素食天地"
-  },
-  {
-    "name": "煎餅樂園",
-    "opening_time": [{ "start": "09:00", "end": "18:00" }],
-    "type": ["早餐", "點心"],
-    "address": "台北市信義區煎餅大道777號",
-    "rating": 4.4,
-    "price": { "low": 200, "high": 400 },
-    "location": "公館",
-    "link": "https://example.com/煎餅樂園"
+    "link": "https://maps.app.goo.gl/UgbcR8EDMDtGVSJK6"
   }
 ]
