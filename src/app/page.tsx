@@ -8,6 +8,7 @@ import config from '@/../next.config';
 export default function Home() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState<Restaurant[]>([]);
+  const [randomRestaurant, setRandomRestaurant] = useState<Restaurant | null>(null); // State for random restaurant
 
   // Filters
   const [selectedType, setSelectedType] = useState<string>('不限');
@@ -79,6 +80,14 @@ export default function Home() {
     }
 
     setFilteredRestaurants(filtered);
+    setRandomRestaurant(null);
+  };
+
+  // Function to select a random restaurant
+  const handleDecideForMe = () => {
+    const randomIndex = Math.floor(Math.random() * filteredRestaurants.length);
+    const selected = filteredRestaurants[randomIndex];
+    setRandomRestaurant(selected);
   };
 
   return (
@@ -200,13 +209,27 @@ export default function Home() {
             查詢
           </button>
         </div>
+
+        {/* Decide for me Button */}
+        <div className='flex items-end w-full sm:w-auto'>
+          <button
+            onClick={handleDecideForMe}
+            className='w-full sm:w-auto py-3 px-6 text-white bg-green-600 rounded-lg text-lg font-medium shadow-lg hover:bg-green-700 transition duration-200 ease-in-out mt-4'
+          >
+            幫我選
+          </button>
+        </div>
       </div>
 
       {/* Restaurant List */}
       <div className='flex flex-wrap justify-center gap-4'>
-        {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.name} restaurant={restaurant} />
-        ))}
+        {randomRestaurant ? (
+          <RestaurantCard key={randomRestaurant.name} restaurant={randomRestaurant} />
+        ) : (
+          filteredRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant.name} restaurant={restaurant} />
+          ))
+        )}
       </div>
     </div>
   );
