@@ -55,10 +55,18 @@ export default function Home() {
     if (isOpenNow) {
       const currentTime = new Date();
       const currentHour = currentTime.getHours();
+      const currentMinute = currentTime.getMinutes();
+      const currentTimeInMinutes = currentHour * 60 + currentMinute;
+
       filtered = filtered.filter((restaurant) => {
         return restaurant.opening_time.some((timeSlot) => {
-          const [startHour, endHour] = [parseInt(timeSlot.start.split(':')[0]), parseInt(timeSlot.end.split(':')[0])];
-          return currentHour >= startHour && currentHour < endHour;
+          const [startHour, startMinute] = timeSlot.start.split(':').map(Number);
+          const [endHour, endMinute] = timeSlot.end.split(':').map(Number);
+
+          const startTimeInMinutes = startHour * 60 + startMinute;
+          const endTimeInMinutes = endHour * 60 + endMinute;
+
+          return currentTimeInMinutes >= startTimeInMinutes && currentTimeInMinutes < endTimeInMinutes;
         });
       });
     }
