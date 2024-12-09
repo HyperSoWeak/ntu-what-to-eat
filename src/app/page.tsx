@@ -16,7 +16,7 @@ export default function Home() {
   const [isOpenNow, setIsOpenNow] = useState<boolean>(false);
 
   // Sorting
-  const [sortCriteria, setSortCriteria] = useState<string>('無');
+  const [sortCriteria, setSortCriteria] = useState<string>('none');
 
   useEffect(() => {
     const fetchRestaurants = async () => {
@@ -146,8 +146,8 @@ export default function Home() {
             className='mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
           >
             <option value='不限'>不限</option>
+            <option value='校內'>校內</option>
             <option value='118巷'>118巷</option>
-            <option value='新生南路'>新生南路</option>
             <option value='公館'>公館</option>
             <option value='溫州街'>溫州街</option>
           </select>
