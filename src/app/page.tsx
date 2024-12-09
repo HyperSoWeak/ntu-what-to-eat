@@ -1,17 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Container, Box, Typography, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-import RestaurantCard from './components/RestaurantCard';
-
-interface Restaurant {
-  name: string;
-  opening_time: { start: string; end: string }[];
-  type: string[];
-  address: string;
-  rating: number;
-  price: string;
-}
+import RestaurantCard from '@/components/RestaurantCard';
+import { Restaurant } from '@/types/Restaurant';
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
@@ -47,63 +38,65 @@ export default function Home() {
   };
 
   return (
-    <Container sx={{ marginTop: 4 }}>
-      <Box sx={{ marginBottom: 2 }}>
-        <Typography variant="h4" component="h1" align="center" sx={{ fontWeight: 'bold', color: '#3f51b5' }}>
-          NTU What To Eat
-        </Typography>
-      </Box>
+    <div className="container mx-auto mt-4">
+      {/* Header */}
+      <div className="mb-4 text-center">
+        <h1 className="text-4xl font-bold text-indigo-600">NTU What To Eat</h1>
+      </div>
 
       {/* Filters Section */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginBottom: 3 }}>
-        <FormControl sx={{ width: 200 }}>
-          <InputLabel>Type</InputLabel>
-          <Select
+      <div className="flex justify-center gap-4 mb-6">
+        {/* Type Filter */}
+        <div className="w-56">
+          <label htmlFor="type" className="block text-sm font-medium text-gray-700">Type</label>
+          <select
+            id="type"
             value={selectedType}
-            label="Type"
             onChange={(e) => setSelectedType(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <MenuItem value="全部">全部</MenuItem>
-            <MenuItem value="早餐">早餐</MenuItem>
-            <MenuItem value="午餐">午餐</MenuItem>
-            <MenuItem value="晚餐">晚餐</MenuItem>
-            <MenuItem value="點心">點心</MenuItem>
-            <MenuItem value="宵夜">宵夜</MenuItem>
-          </Select>
-        </FormControl>
+            <option value="全部">全部</option>
+            <option value="早餐">早餐</option>
+            <option value="午餐">午餐</option>
+            <option value="晚餐">晚餐</option>
+            <option value="點心">點心</option>
+            <option value="宵夜">宵夜</option>
+          </select>
+        </div>
 
-        <FormControl sx={{ width: 200 }}>
-          <InputLabel>Price</InputLabel>
-          <Select
+        {/* Price Filter */}
+        <div className="w-56">
+          <label htmlFor="price" className="block text-sm font-medium text-gray-700">Price</label>
+          <select
+            id="price"
             value={selectedPrice}
-            label="Price"
             onChange={(e) => setSelectedPrice(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           >
-            <MenuItem value="全部">全部</MenuItem>
-            <MenuItem value="$$">$$</MenuItem>
-            <MenuItem value="$$$">$$$</MenuItem>
-            <MenuItem value="$$$$">$$$$</MenuItem>
-          </Select>
-        </FormControl>
+            <option value="全部">全部</option>
+            <option value="$">$$</option>
+            <option value="$$">$$$</option>
+            <option value="$$$">$$$$</option>
+          </select>
+        </div>
 
-        <Button variant="contained" color="primary" onClick={handleFilterChange}>
-          Apply Filters
-        </Button>
-      </Box>
+        {/* Apply Filters Button */}
+        <div className="flex items-end">
+          <button
+            onClick={handleFilterChange}
+            className="w-full py-2 px-4 text-white bg-blue-600 rounded-md text-sm font-medium shadow-md hover:bg-blue-700"
+          >
+            Apply Filters
+          </button>
+        </div>
+      </div>
 
       {/* Restaurant List */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: 2,
-        }}
-      >
+      <div className="flex flex-wrap justify-start gap-4">
         {filteredRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.name} restaurant={restaurant} />
         ))}
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 }
