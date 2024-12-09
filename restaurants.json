@@ -1,0 +1,41 @@
+[
+  {
+    "name": "高和食堂",
+    "opening_time": [
+      { "start": "11:30", "end": "14:00" },
+      { "start": "17:00", "end": "20:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷60號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/P9qzaqsdHyceGvXh6"
+  },
+  {
+    "name": "二八麵堂",
+    "opening_time": [
+      { "start": "11:00", "end": "14:30" },
+      { "start": "17:00", "end": "20:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷65-4號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/eV1yHWRQ78CgqSWX9"
+  },
+  {
+    "name": "I'm Pasta 和平店",
+    "opening_time": [
+      { "start": "11:00", "end": "15:00" },
+      { "start": "17:00", "end": "20:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷50號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/UgbcR8EDMDtGVSJK6"
+  }
+]
