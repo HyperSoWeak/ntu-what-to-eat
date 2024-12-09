@@ -171,5 +171,296 @@
     "price": { "low": 1, "high": 200 },
     "location": "118巷",
     "link": "https://maps.app.goo.gl/1en7MfM9xWWsxgVX7"
+  },
+  {
+    "name": "五花馬水餃館 臺大店",
+    "opening_time": [{ "start": "11:00", "end": "19:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路四段1號二 樓",
+    "rating": 3.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "校內",
+    "link": "https://maps.app.goo.gl/19u8McQRcCxyEyM58"
+  },
+  {
+    "name": "女九滷味",
+    "opening_time": [{ "start": "11:00", "end": "19:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路四段1號二 樓",
+    "rating": 0.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "校內",
+    "link": "https://www.google.com.tw/maps/"
+  },
+  {
+    "name": "梁社漢排骨-台大店",
+    "opening_time": [{ "start": "10:30", "end": "20:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路三段333巷11號",
+    "rating": 3.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/6cCaWWx9zfH1T9qh6"
+  },
+  {
+    "name": "八方雲集-台大店",
+    "opening_time": [{ "start": "10:30", "end": "20:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路三段333巷11號",
+    "rating": 3.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/6cCaWWx9zfH1T9qh6"
+  },
+  {
+    "name": "泰街頭",
+    "opening_time": [
+      { "start": "11:30", "end": "14:30" },
+      { "start": "17:00", "end": "21:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "10648台北市大安區溫州街74巷6號1樓",
+    "rating": 3.9,
+    "price": { "low": 200, "high": 400 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/MQY6fQAL6C2azYm8A"
+  },
+  {
+    "name": "柒食貳",
+    "opening_time": [
+      { "start": "11:00", "end": "14:30" },
+      { "start": "17:00", "end": "21:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區溫州街72號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/BNQqt5bz6bWAXYo59"
+  },
+  {
+    "name": "溏老鴨平價小火鍋",
+    "opening_time": [
+      { "start": "11:40", "end": "15:00" },
+      { "start": "17:00", "end": "22:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區新生南路三段70巷3號",
+    "rating": 4.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/dMDyib3ZHRPcYBFg9"
+  },
+  {
+    "name": "瑪莉珍比薩 台大店",
+    "opening_time": [
+      { "start": "11:30", "end": "15:00" },
+      { "start": "16:30", "end": "20:45" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區溫州街89號",
+    "rating": 4.3,
+    "price": { "low": 200, "high": 400 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/w39fFYf6VeMUdNLx6"
+  },
+  {
+    "name": "好想見麵-公館店",
+    "opening_time": [{ "start": "11:00", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路三段316巷12號",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/LH5U8QUpStcghRMv9"
+  },
+  {
+    "name": "劉記川味牛肉麵",
+    "opening_time": [{ "start": "11:45", "end": "20:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路三段316巷8弄6號",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/jg14JEkj3rc6hgUd8"
+  },
+  {
+    "name": "築本屋公館店",
+    "opening_time": [{ "start": "11:00", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路四段52巷6號",
+    "rating": 4.8,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/2vnqrQXMDHcxXtob8"
+  },
+  {
+    "name": "鷹流東京醬油拉麵-蘭丸(公館店)",
+    "opening_time": [{ "start": "15:00", "end": "21:00" }],
+    "type": ["晚餐"],
+    "address": "100台北市中正區汀州路三段104巷4號",
+    "rating": 3.9,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/ibAGvbfUgJi22iZy5"
+  },
+  {
+    "name": "深夜未歸-公館店",
+    "opening_time": [{ "start": "00:00", "end": "24:00" }],
+    "type": ["早餐", "午餐", "晚餐", "宵夜"],
+    "address": "100047台北市中正區汀州路三段125號",
+    "rating": 3.9,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/Q7GVQ1RBeqm81UU46"
+  },
+  {
+    "name": "Mr. 雪腐 公館店",
+    "opening_time": [{ "start": "12:15", "end": "22:00" }],
+    "type": ["點心"],
+    "address": "100台北市中正區羅斯福路三段244巷21號",
+    "rating": 4.6,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/Xt7Gxfe36VLLTwLt8"
+  },
+  {
+    "name": "轉轉發現義大利麵",
+    "opening_time": [{ "start": "11:30", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區汀州路三段140號",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/JvDsc2dUbwRauXbaA"
+  },
+  {
+    "name": "大埔鐵板燒 公館店",
+    "opening_time": [{ "start": "11:00", "end": "24:00" }],
+    "type": ["午餐", "晚餐", "宵夜"],
+    "address": "100台北市中正區汀州路三段287號",
+    "rating": 4.1,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/9EbHiN7aJqNw1A5U7"
+  },
+  {
+    "name": "Chillken",
+    "opening_time": [{ "start": "11:30", "end": "25:00" }],
+    "type": ["午餐", "晚餐", "宵夜"],
+    "address": "106台北市大安區新生南路三段94巷8號一樓",
+    "rating": 4.3,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/RPrKuusrAGrBYbDf7"
+  },
+  {
+    "name": "臺一牛奶大王",
+    "opening_time": [{ "start": "11:00", "end": "23:00" }],
+    "type": ["點心"],
+    "address": "106台北市大安區新生南路三段82號",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/n1mTV4Fc6vXd6moL6"
+  },
+  {
+    "name": "白帝城川式滷味(公館店）",
+    "opening_time": [{ "start": "16:30", "end": "24:00" }],
+    "type": ["晚餐", "點心", "宵夜"],
+    "address": "10091台北市中正區羅斯福路四段136巷8號",
+    "rating": 3.7,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/WnmnPbh7ZhZvUfsT9"
+  },
+  {
+    "name": "墨洋拉麵",
+    "opening_time": [{ "start": "11:00", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路四段136巷10號",
+    "rating": 4.1,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/eSYNpAx9M9418WGQA"
+  },
+  {
+    "name": "塊雞師食務所",
+    "opening_time": [
+      { "start": "11:30", "end": "15:00" },
+      { "start": "16:30", "end": "22:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路四段146號",
+    "rating": 4.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/AZzp3QXwg3VPDzzm6"
+  },
+  {
+    "name": "韓天閣",
+    "opening_time": [
+      { "start": "11:30", "end": "14:30" },
+      { "start": "17:00", "end": "21:30" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路四段78巷1弄11號",
+    "rating": 4.1,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/ZfkRdg6LsnqC33BA6"
+  },
+  {
+    "name": "隱家拉麵 公館店",
+    "opening_time": [
+      { "start": "11:30", "end": "14:00" },
+      { "start": "16:30", "end": "22:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "10090台北市中正區羅斯福路四段52巷1之1號",
+    "rating": 4.2,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/yN5Rtejh3kcuyZ958"
+  },
+  {
+    "name": "好螺嗦螺螄粉｜公館店",
+    "opening_time": [{ "start": "11:00", "end": "25:00" }],
+    "type": ["午餐", "晚餐", "宵夜"],
+    "address": "100台北市中正區羅斯福路四段52巷1之1號",
+    "rating": 4.3,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/rYwQnVyps8QPXCmcA"
+  },
+  {
+    "name": "胡饕米粉湯",
+    "opening_time": [{ "start": "11:00", "end": "22:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路三段284巷8號1樓",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/NaVKsMeEzRgNhAhG7"
+  },
+  {
+    "name": "小螺波 公館店",
+    "opening_time": [{ "start": "11:00", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路三段284巷11號一樓",
+    "rating": 4.3,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/6xPSFBFSKH82KN4FA"
+  },
+  {
+    "name": "Mr. 拉麵公館店",
+    "opening_time": [{ "start": "11:30", "end": "21:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區羅斯福路三段316巷9弄2號",
+    "rating": 3.7,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/b66n17HNQXqA5Gfy5"
   }
 ]
