@@ -117,8 +117,8 @@ export default function Home() {
 
       {/* Version and Information */}
       <div className='mb-6 text-center text-sm text-gray-500'>
-        <p>Version: 1.0.0</p>
-        <p>Last Update: 2024-12-09</p>
+        <p>Version: 1.0.1</p>
+        <p>Last Update: 2024-12-10</p>
         <p>
           Made by:{' '}
           <a href='https://github.com/HyperSoWeak' target='_blank' className='text-blue-500 hover:underline'>
