@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 - Add more restaurants data.
 
 ### Fixed
-- The bug where the query button does not update after being pressed has been fixed.
+- Fix The bug where the query button does not update after being pressed.
+- Fix midnight time calculation.
 
 ---
 

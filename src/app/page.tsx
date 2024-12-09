@@ -60,6 +60,7 @@ export default function Home() {
       const currentHour = currentTime.getHours();
       const currentMinute = currentTime.getMinutes();
       const currentTimeInMinutes = currentHour * 60 + currentMinute;
+      const currentTimeInMinutesMidnight = currentTimeInMinutes + 24 * 60;
 
       filtered = filtered.filter((restaurant) => {
         return restaurant.opening_time.some((timeSlot) => {
@@ -69,7 +70,10 @@ export default function Home() {
           const startTimeInMinutes = startHour * 60 + startMinute;
           const endTimeInMinutes = endHour * 60 + endMinute;
 
-          return currentTimeInMinutes >= startTimeInMinutes && currentTimeInMinutes < endTimeInMinutes;
+          return (
+            (currentTimeInMinutes >= startTimeInMinutes && currentTimeInMinutes < endTimeInMinutes) ||
+            (currentTimeInMinutesMidnight >= startTimeInMinutes && currentTimeInMinutesMidnight < endTimeInMinutes)
+          );
         });
       });
     }
