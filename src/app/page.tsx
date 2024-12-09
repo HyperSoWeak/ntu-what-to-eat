@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import RestaurantCard from '@/components/RestaurantCard';
 import { Restaurant } from '@/types/Restaurant';
+import config from '@/../next.config';
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
@@ -19,7 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchRestaurants = async () => {
-      const response = await fetch('/restaurants.json');
+      const response = await fetch(`${config.basePath}/restaurants.json`);
       const data = await response.json();
       setRestaurants(data);
       setFilteredRestaurants(data);
