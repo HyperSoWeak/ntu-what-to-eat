@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'NTU What To Eat',
-  description: 'A simple app to help you decide what to eat',
+  description: 'Discover your next meal at NTU',
 };
 
 export default function RootLayout({

@@ -19,6 +19,8 @@ export default function Home() {
   // Sorting
   const [sortCriteria, setSortCriteria] = useState<string>('none');
 
+  const [shouldDecideForMe, setShouldDecideForMe] = useState<boolean>(false);
+
   useEffect(() => {
     const fetchRestaurants = async () => {
       const response = await fetch(`${config.basePath}/restaurants.json`);
@@ -30,7 +32,7 @@ export default function Home() {
     fetchRestaurants();
   }, []);
 
-  const handleFilterChange = () => {
+  const applyFilters = () => {
     let filtered = restaurants;
 
     // Filter by type
@@ -73,22 +75,37 @@ export default function Home() {
     }
 
     // Sort the filtered restaurants
+    const sortedRestaurants = [...filtered]; // Somehow it need to copy the array to work???
+
     if (sortCriteria === 'rating') {
-      filtered.sort((a, b) => b.rating - a.rating);
+      sortedRestaurants.sort((a, b) => b.rating - a.rating);
     } else if (sortCriteria === 'price') {
-      filtered.sort((a, b) => a.price.low - b.price.low);
+      sortedRestaurants.sort((a, b) => a.price.low - b.price.low);
     }
 
-    setFilteredRestaurants(filtered);
+    // Update the state with the sorted array
+    setFilteredRestaurants(sortedRestaurants);
+  };
+
+  const handleFilterChange = () => {
+    applyFilters();
     setRandomRestaurant(null);
   };
 
   // Function to select a random restaurant
   const handleDecideForMe = () => {
-    const randomIndex = Math.floor(Math.random() * filteredRestaurants.length);
-    const selected = filteredRestaurants[randomIndex];
-    setRandomRestaurant(selected);
+    setShouldDecideForMe(true); // Set the flag to trigger the random selection
+    applyFilters(); // Apply filters
   };
+
+  useEffect(() => {
+    if (shouldDecideForMe && filteredRestaurants.length > 0) {
+      const randomIndex = Math.floor(Math.random() * filteredRestaurants.length);
+      const selected = filteredRestaurants[randomIndex];
+      setRandomRestaurant(selected);
+      setShouldDecideForMe(false);
+    }
+  }, [filteredRestaurants, shouldDecideForMe]);
 
   return (
     <div className='container mx-auto px-4 mt-6'>
@@ -226,9 +243,7 @@ export default function Home() {
         {randomRestaurant ? (
           <RestaurantCard key={randomRestaurant.name} restaurant={randomRestaurant} />
         ) : (
-          filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.name} restaurant={restaurant} />
-          ))
+          filteredRestaurants.map((restaurant) => <RestaurantCard key={restaurant.name} restaurant={restaurant} />)
         )}
       </div>
     </div>
