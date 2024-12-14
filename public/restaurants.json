@@ -462,5 +462,249 @@
     "price": { "low": 200, "high": 400 },
     "location": "公館",
     "link": "https://maps.app.goo.gl/b66n17HNQXqA5Gfy5"
+  },
+  {
+    "name": "啦啦麵 24h無人拉麵店-台大店",
+    "opening_time": [{ "start": "00:00", "end": "24:00" }],
+    "type": ["早餐", "午餐", "晚餐", "宵夜"],
+    "address": "100046台北市中正區羅斯福路四段140號",
+    "rating": 4.9,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/yXB9EvVmpJU85diQ9"
+  },
+  {
+    "name": "瑞安豆漿大王",
+    "opening_time": [{ "start": "00:00", "end": "24:00" }],
+    "type": ["早餐", "午餐", "晚餐", "宵夜"],
+    "address": "106台北市大安區瑞安街69號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/oLTz33FVEhERBHuU9"
+  },
+  {
+    "name": "永和豆漿 基隆路",
+    "opening_time": [
+      { "start": "00:00", "end": "14:00" },
+      { "start": "20:00", "end": "24:00" }
+    ],
+    "type": ["早餐", "午餐", "晚餐", "宵夜"],
+    "address": "106台北市大安區基隆路二段251號",
+    "rating": 3.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "",
+    "link": "https://maps.app.goo.gl/Nnng6m1MfWWgrnEP7"
+  },
+  {
+    "name": "鍋in百元風味火鍋",
+    "opening_time": [{ "start": "11:00", "end": "23:45" }],
+    "type": ["午餐", "晚餐", "宵夜"],
+    "address": "100台北市中正區汀州路三段196號",
+    "rating": 3.9,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/L6ouacktse1AEWMy8"
+  },
+  {
+    "name": "魚你相聚獨享鍋",
+    "opening_time": [
+      { "start": "11:30", "end": "14:30" },
+      { "start": "17:00", "end": "22:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "2樓, No. 168號汀州路三段中正區台北市10091",
+    "rating": 4.4,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/47Jg7Hn58XhtVGUk6"
+  },
+  {
+    "name": "すき家公館",
+    "opening_time": [{ "start": "00:00", "end": "24:00" }],
+    "type": ["早餐", "午餐", "晚餐", "宵夜"],
+    "address": "106台北市大安區羅斯福路三段309號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/5DF4goLfeYJCDfQk7"
+  },
+  {
+    "name": "劉家水煎包",
+    "opening_time": [{ "start": "05:30", "end": "21:30" }],
+    "type": ["早餐", "午餐", "晚餐"],
+    "address": "100台北市中正區汀州路三段189號",
+    "rating": 3.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/xjuiUJYZ93xMVdiJA"
+  },
+  {
+    "name": "馬辣頂級麻辣鴛鴦火鍋 台北公館店",
+    "opening_time": [{ "start": "11:30", "end": "26:00" }],
+    "type": ["午餐", "晚餐", "宵夜"],
+    "address": "100台北市中正區汀州路三段94號",
+    "rating": 4.2,
+    "price": { "low": 600, "high": 800 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/SDrHEBN4scyrff1H9"
+  },
+  {
+    "name": "阿薄郎台式小酒館－公館店",
+    "opening_time": [
+      { "start": "11:30", "end": "14:30" },
+      { "start": "17:30", "end": "22:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "100台北市中正區汀州路三段96號",
+    "rating": 4.5,
+    "price": { "low": 200, "high": 400 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/Xev6fxQwj5FyEcjD6"
+  },
+  {
+    "name": "胖老爹美式炸雞 公館台大店",
+    "opening_time": [{ "start": "11:30", "end": "26:00" }],
+    "type": ["午餐", "晚餐", "宵夜", "點心"],
+    "address": "100台北市中正區汀州路三段167號1樓",
+    "rating": 3.5,
+    "price": { "low": 1, "high": 200 },
+    "location": "公館",
+    "link": "https://maps.app.goo.gl/AdL9tpp5eNfXyF2N6"
+  },
+  {
+    "name": "阿孟石碗燒河粉",
+    "opening_time": [
+      { "start": "11:00", "end": "14:00" },
+      { "start": "17:00", "end": "20:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷69號",
+    "rating": 4.6,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/i5wtp3i6v9xfxR1L7"
+  },
+  {
+    "name": "師大第一腿-甄品味",
+    "opening_time": [
+      { "start": "10:30", "end": "14:00" },
+      { "start": "16:30", "end": "20:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷67號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/dS5w6XeG3UYaTk2g6"
+  },
+  {
+    "name": "蔥燉牛肉麵",
+    "opening_time": [
+      { "start": "11:00", "end": "15:00" },
+      { "start": "17:00", "end": "20:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷54弄1號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/4RcCrBWWupFLus9u8"
+  },
+  {
+    "name": "鑫吉野烤肉飯-大安和平店",
+    "opening_time": [{ "start": "09:00", "end": "20:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷61-1號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/gDS5MEx52yeY7i538"
+  },
+  {
+    "name": "煎恰恰粉漿蛋餅專賣店",
+    "opening_time": [{ "start": "10:00", "end": "19:10" }],
+    "type": ["午餐", "晚餐", "點心"],
+    "address": "106台北市大安區和平東路二段118巷57號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/w22mawxYXs3BaM9m9"
+  },
+  {
+    "name": "新丼 和平店",
+    "opening_time": [{ "start": "11:30", "end": "20:00" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷45號",
+    "rating": 4.3,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/vftL4699NkxATqVk9"
+  },
+  {
+    "name": "老哥雞肉飯乾拌麵",
+    "opening_time": [{ "start": "11:00", "end": "20:30" }],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷36號",
+    "rating": 4.0,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/6SMUskYhWYYhvEi96"
+  },
+  {
+    "name": "小圓村",
+    "opening_time": [
+      { "start": "11:00", "end": "14:00" },
+      { "start": "17:00", "end": "20:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區和平東路二段118巷41號",
+    "rating": 4.2,
+    "price": { "low": 1, "high": 200 },
+    "location": "118巷",
+    "link": "https://maps.app.goo.gl/Fc8siNcoPqyj9y3f9"
+  },
+  {
+    "name": "活大麥當勞",
+    "opening_time": [{ "start": "07:00", "end": "22:00" }],
+    "type": ["早餐", "午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路四段1號",
+    "rating": 3.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "校內",
+    "link": "https://maps.app.goo.gl/36Vnvq3p1dUbNQfM6"
+  },
+  {
+    "name": "丘蒔堂",
+    "opening_time": [
+      { "start": "11:00", "end": "14:00" },
+      { "start": "16:30", "end": "19:00" }
+    ],
+    "type": ["午餐", "晚餐"],
+    "address": "106台北市大安區羅斯福路四段1號",
+    "rating": 4.1,
+    "price": { "low": 1, "high": 200 },
+    "location": "校內",
+    "link": "https://maps.app.goo.gl/1wrtYDTLGomXRZZx6"
+  },
+  {
+    "name": "Twins手工蛋餅",
+    "opening_time": [{ "start": "07:00", "end": "14:00" }],
+    "type": ["早餐", "午餐"],
+    "address": "106台北市大安區羅斯福路四段1號",
+    "rating": 4.6,
+    "price": { "low": 1, "high": 200 },
+    "location": "校內",
+    "link": "https://maps.app.goo.gl/fP1Nvq4KrwiYCxyT6"
+  },
+  {
+    "name": "稻咖哩",
+    "opening_time": [{ "start": "17:00", "end": "21:00" }],
+    "type": ["晚餐"],
+    "address": "106台北市大安區溫州街79號",
+    "rating": 4.4,
+    "price": { "low": 1, "high": 200 },
+    "location": "溫州街",
+    "link": "https://maps.app.goo.gl/mtTLmAQfhDLHnN6s6"
   }
 ]
