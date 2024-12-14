@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 import RestaurantCard from '@/components/RestaurantCard';
 import { Restaurant } from '@/types/Restaurant';
 import config from '@/../next.config';
+import { filterRestaurants } from '@/utils/filterRestaurants';
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState<Restaurant[]>([]);
-  const [randomRestaurant, setRandomRestaurant] = useState<Restaurant | null>(null); // State for random restaurant
+  const [randomRestaurant, setRandomRestaurant] = useState<Restaurant | null>(null);
 
   // Filters
   const [selectedType, setSelectedType] = useState<string>('不限');
@@ -32,91 +33,41 @@ export default function Home() {
     fetchRestaurants();
   }, []);
 
-  const applyFilters = () => {
-    let filtered = restaurants;
-
-    // Filter by type
-    if (selectedType !== '不限') {
-      filtered = filtered.filter((restaurant) => restaurant.type.includes(selectedType));
-    }
-
-    // Filter by price range
-    if (selectedPrice !== '不限') {
-      filtered = filtered.filter((restaurant) => {
-        const [minSelectedPrice, maxSelectedPrice] = [0, parseInt(selectedPrice)];
-        const { low, high } = restaurant.price;
-        return low < maxSelectedPrice && (high ? high >= minSelectedPrice : true);
-      });
-    }
-
-    // Filter by location
-    if (selectedLocation !== '不限') {
-      filtered = filtered.filter((restaurant) => restaurant.location === selectedLocation);
-    }
-
-    // Filter by whether it's open now
-    if (isOpenNow) {
-      const currentTime = new Date();
-      const currentHour = currentTime.getHours();
-      const currentMinute = currentTime.getMinutes();
-      const currentTimeInMinutes = currentHour * 60 + currentMinute;
-      const currentTimeInMinutesMidnight = currentTimeInMinutes + 24 * 60;
-
-      filtered = filtered.filter((restaurant) => {
-        return restaurant.opening_time.some((timeSlot) => {
-          const [startHour, startMinute] = timeSlot.start.split(':').map(Number);
-          const [endHour, endMinute] = timeSlot.end.split(':').map(Number);
-
-          const startTimeInMinutes = startHour * 60 + startMinute;
-          const endTimeInMinutes = endHour * 60 + endMinute;
-
-          return (
-            (currentTimeInMinutes >= startTimeInMinutes && currentTimeInMinutes < endTimeInMinutes) ||
-            (currentTimeInMinutesMidnight >= startTimeInMinutes && currentTimeInMinutesMidnight < endTimeInMinutes)
-          );
-        });
-      });
-    }
-
-    // Sort the filtered restaurants
-    const sortedRestaurants = [...filtered]; // Somehow it need to copy the array to work???
-
-    if (sortCriteria === 'rating') {
-      sortedRestaurants.sort((a, b) => b.rating - a.rating);
-    } else if (sortCriteria === 'price') {
-      sortedRestaurants.sort((a, b) => a.price.low - b.price.low);
-    }
-
-    // Update the state with the sorted array
-    setFilteredRestaurants(sortedRestaurants);
-  };
-
   const handleFilterChange = () => {
-    applyFilters();
+    const filtered = filterRestaurants(restaurants, {
+      selectedType,
+      selectedPrice,
+      selectedLocation,
+      isOpenNow,
+      sortCriteria,
+    });
+    setFilteredRestaurants(filtered);
     setRandomRestaurant(null);
   };
 
-  // Function to select a random restaurant
   const handleDecideForMe = () => {
-    setShouldDecideForMe(true); // Set the flag to trigger the random selection
-    applyFilters(); // Apply filters
+    setShouldDecideForMe(true);
+    handleFilterChange();
   };
 
   useEffect(() => {
     if (shouldDecideForMe && filteredRestaurants.length > 0) {
       const randomIndex = Math.floor(Math.random() * filteredRestaurants.length);
-      const selected = filteredRestaurants[randomIndex];
-      setRandomRestaurant(selected);
+      setRandomRestaurant(filteredRestaurants[randomIndex]);
       setShouldDecideForMe(false);
     }
   }, [filteredRestaurants, shouldDecideForMe]);
 
   return (
-    <div className='container mx-auto px-4 mt-6'>
+    <div className='container mx-auto px-4 mt-6 py-2'>
       {/* Header Section */}
       <div className='mt-8 mb-4 text-center'>
-        <h1 className='text-4xl sm:text-5xl font-bold text-blue-600 tracking-wide'>NTU What To Eat</h1>
-        <p className='mt-2 text-base sm:text-lg text-gray-600'>Discover your next meal at NTU</p>
+        <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-cyan-500 md:text-5xl lg:text-6xl'>
+          NTU What To Eat
+        </h1>
+        <p className='mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400'>
+          Discover your next meal at NTU
+        </p>
       </div>
 
       {/* Version and Information */}
